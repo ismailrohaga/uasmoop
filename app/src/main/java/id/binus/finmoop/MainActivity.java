@@ -133,12 +133,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    void initGameOne() {
+    void clearGame() {
         castles.clear();
         pOneArmy.clear();
         pOneHero.clear();
         pTwoArmy.clear();
         pTwoHero.clear();
+    }
+
+    void initGameOne() {
+        clearGame();
+
         //init player one
         pOneArmy.add(new Army(Constants.CAVALRY, 100000));
         pOneHero.add(cavalryHero);
@@ -160,11 +165,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void initGameTwo() {
-        castles.clear();
-        pOneArmy.clear();
-        pOneHero.clear();
-        pTwoArmy.clear();
-        pTwoHero.clear();
+        clearGame();
+
         //init player one
         pOneArmy.add(new Army(Constants.CAVALRY, 75000));
         pOneArmy.add(new Army(Constants.ARCHER, 25000));
