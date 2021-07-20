@@ -30,6 +30,9 @@ public class Hero {
             case Constants.ARCHER:
                 name = "Archer";
                 break;
+            case Constants.CATAPAULT:
+                name = "Catapault";
+                break;
         }
 
         return name;
