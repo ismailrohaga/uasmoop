@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Battle of Castle"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg"/>
+
+    <LinearLayout
+        android:id="@+id/layoutPlayers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="ContentDescription">
+
+        <RelativeLayout
+            android:id="@+id/layoutPOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="8dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivCastlePOne"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/castle"
+                android:background="@drawable/steel"/>
+
+            <TextView
+                android:id="@+id/tvCastlePOne"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCastlePOne"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Title"/>
+
+            <TextView
+                android:id="@+id/tvCastleDetailPOne"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCastlePOne"
+                android:textColor="@color/black"
+                android:text="Detail"/>
+
+            <TextView
+                android:id="@+id/pOneWin"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/tvCastleDetailPOne"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:src="@drawable/vs"/>
+
+        <RelativeLayout
+            android:id="@+id/layoutPTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="8dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivCastlePTwo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/castle"
+                android:background="@drawable/steel"/>
+
+            <TextView
+                android:id="@+id/tvCastlePTwo"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCastlePTwo"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Title"/>
+
+            <TextView
+                android:id="@+id/tvCastleDetailPTwo"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCastlePTwo"
+                android:textColor="@color/black"
+                android:text="Detail"/>
+
+            <TextView
+                android:id="@+id/pTwoWin"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/tvCastleDetailPTwo"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:text="battle_log"
+        app:layout_constraintTop_toBottomOf="@id/layoutPlayers"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Battle"
+        android:gravity="center"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
